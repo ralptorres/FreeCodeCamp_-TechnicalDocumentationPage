@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav id="navbar">
+        <header class="head-font">Add React to a Website</header>
+        <ul>
+          <li>
+            <a class="nav-link" href="#Getting_Started">Getting Started</a>
+          </li>
+          <li><a class="nav-link" href="#Try_React">Try React</a></li>
+          <li><a class="nav-link" href="#Learn_React">Learn React</a></li>
+          <li>
+            <a class="nav-link" href="#Add_React_in_One_Minute"
+              >Add React in One Minute</a
+            >
+          </li>
+          <li>
+            <a class="nav-link" href="#Staying_Informed">Staying Informed</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#Versioned_Documentation"
+              >Versioned Documentation</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <main id="main-doc">
+        <section class="main-section" id="Getting_Started">
+          <header>Getting Started</header>
+          <p>
+            This page is an overview of the React documentation and related
+            resources.
+          </p>
+          <p>
+            React is a JavaScript library for building user interfaces. Learn
+            what React is all about on our homepage or in the tutorial.
+          </p>
+        </section>
+        <section class="main-section" id="Try_React">
+          <header>Try React</header>
+          <p>
+            React has been designed from the start for gradual adoption, and you
+            can use as little or as much React as you need. Whether you want to
+            get a taste of React, add some interactivity to a simple HTML page,
+            or start a complex React-powered app, the links in this section will
+            help you get started.
+          </p>
+          <ul>
+            <li>Online Playgrounds</li>
+            <p>
+              If you’re interested in playing around with React, you can use an
+              online code playground. Try a Hello World template on CodePen,
+              CodeSandbox, or Stackblitz. If you prefer to use your own text
+              editor, you can also download this HTML file, edit it, and open it
+              from the local filesystem in your browser. It does a slow runtime
+              code transformation, so we’d only recommend using this for simple
+              demos.
+            </p>
+            <li>Add React to a Website</li>
+            <p>
+              You can add React to an HTML page in one minute. You can then
+              either gradually expand its presence, or keep it contained to a
+              few dynamic widgets.
+            </p>
+            <li>Create a New React App</li>
+            <p>
+              When starting a React project, a simple HTML page with script tags
+              might still be the best option. It only takes a minute to set up!
+              As your application grows, you might want to consider a more
+              integrated setup. There are several JavaScript toolchains we
+              recommend for larger applications. Each of them can work with
+              little to no configuration and lets you take full advantage of the
+              rich React ecosystem.
+            </p>
+          </ul>
+        </section>
+        <section class="main-section" id="Learn_React">
+          <header>Learn React</header>
+          <p>
+            People come to React from different backgrounds and with different
+            learning styles. Whether you prefer a more theoretical or a
+            practical approach, we hope you’ll find this section helpful.
+          </p>
+          <ul>
+            <li>
+              If you prefer to learn by doing, start with our practical
+              tutorial.
+            </li>
+            <li>
+              If you prefer to learn concepts step by step, start with our guide
+              to main concepts.
+            </li>
+          </ul>
+          <p>
+            Like any unfamiliar technology, React does have a learning curve.
+            With practice and some patience, you will get the hang of it.
+          </p>
+        </section>
+        <section class="main-section" id="Add_React_in_One_Minute">
+          <header>Add React in One Minute</header>
+          <p>Step 1: Add a DOM Container to the HTML</p>
+          <p>
+            First, open the HTML page you want to edit. Add an empty
+            <code>div</code> tag to mark the spot where you want to display
+            something with React. For example:
+          </p>
+          <pre><code>&lt;!-- ... existing HTML ... --&gt;
+
+        &lt;div id=&quot;like_button_container&quot;&gt;&lt;/div&gt;
+        
+        &lt;!-- ... existing HTML ... --&gt;</code></pre>
+          <p>Step 2: Add the Script Tags</p>
+          <pre><code>&lt;!-- ... other HTML ... --&gt;
+
+        &lt;!-- Load React. --&gt;
+        &lt;!-- Note: when deploying, replace &quot;development.js&quot; with &quot;production.min.js&quot;. --&gt;
+        &lt;script src=&quot;https://unpkg.com/react@18/umd/react.development.js&quot; crossorigin&gt;&lt;/script&gt;
+        &lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.development.js&quot; crossorigin&gt;&lt;/script&gt;
+        
+        &lt;!-- Load our React component. --&gt;
+        &lt;script src=&quot;like_button.js&quot;&gt;&lt;/script&gt;
+        
+        &lt;/body&gt;</code></pre>
+          <p>Step 3: Create a React Component</p>
+          <pre><code>&sol;&sol; ... the starter code you pasted ...
+
+        const domContainer = document.querySelector(&#39;#like_button_container&#39;);
+        const root = ReactDOM.createRoot(domContainer);
+        root.render(e(LikeButton));</code></pre>
+          <p>Tip: Minify JavaScript for Production</p>
+          <p>
+            Before deploying your website to production, be mindful that
+            unminified JavaScript can significantly slow down the page for your
+            users. If you already minify the application scripts, your site will
+            be production-ready if you ensure that the deployed HTML loads the
+            versions of React ending in production.min.js:
+          </p>
+          <pre><code>&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot; crossorigin&gt;&lt;/script&gt;
+        &lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot; crossorigin&gt;&lt;/script&gt;</code></pre>
+
+          <p>Quickly Try JSX</p>
+          <pre><code>&lt;script src=&quot;https://unpkg.com/babel-standalone@6/babel.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+        </section>
+        <section class="main-section" id="Staying_Informed">
+          <header>Staying Informed</header>
+          <p>
+            The React blog is the official source for the updates from the React
+            team. Anything important, including release notes or deprecation
+            notices, will be posted there first. You can also follow the
+            @reactjs account on Twitter, but you won’t miss anything essential
+            if you only read the blog. Not every React release deserves its own
+            blog post, but you can find a detailed changelog for every release
+            in the CHANGELOG.md file in the React repository, as well as on the
+            Releases page.
+          </p>
+        </section>
+        <section class="main-section" id="Versioned_Documentation">
+          <header>Versioned Documentation</header>
+        </section>
+        <p>
+          This documentation always reflects the latest stable version of React.
+          Since React 16, you can find older versions of the documentation on a
+          separate page. Note that documentation for past versions is
+          snapshotted at the time of the release, and isn’t being continuously
+          updated.
+        </p>
+      </main>
+    </div>
+  </body>
+</html>
